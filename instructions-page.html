@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examination Instructions - ExaminationHall</title>
+    <meta name="description" content="Important instructions for test creators and test takers using the ExaminationHall platform.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        .hero-pattern {
+            background-color: #f8fafc;
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .instruction-card {
+            transition: transform 0.2s ease-in-out;
+        }
+        .instruction-card:hover {
+            transform: translateY(-2px);
+        }
+        .download-button {
+            transition: all 0.2s ease-in-out;
+        }
+        .download-button:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-blue-600">ExaminationHall</a>
+                </div>
+                <div class="flex items-center">
+                    <a href="index.html" class="text-gray-600 hover:text-blue-600 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-pattern">
+        <div class="max-w-7xl mx-auto px-4 py-16">
+            <div class="text-center">
+                <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Instructions for <span class="text-blue-600">Test Creators & Test Takers</span>
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                    Essential guidelines for examiners to share with test takers to ensure a smooth examination experience.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-4xl mx-auto px-4 py-12">
+        <!-- For Test Creators Section -->
+        <div class="bg-white rounded-xl shadow-lg p-8 mb-10">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-6">For Test Creators</h2>
+
+            <div class="bg-blue-50 p-6 rounded-lg mb-8">
+                <p class="text-gray-700">
+                    As a test creator, it's essential to provide your test takers with clear instructions to ensure they can access and complete their examinations without issues. Please share the following information with your test takers before the scheduled examination.
+                </p>
+
+                <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <button id="downloadInstructions" class="download-button bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        <span>Download Instructions for Test Takers</span>
+                    </button>
+                    <button id="copyInstructions" class="download-button bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-12a2 2 0 00-2-2h-2M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                        </svg>
+                        <span>Copy to Clipboard</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-lg mb-8">
+                <h3 class="font-semibold text-lg mb-2">Additional Tips for Test Creators</h3>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Set clear time windows for your examinations that provide sufficient time for all test takers</li>
+                    <li>Ensure your test takers have their unique IDs/passwords well before the examination</li>
+                    <li>Consider running a practice test to familiarize users with the platform</li>
+                    <li>Be available during the examination period to address any technical issues</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- For Test Takers Section -->
+        <div class="bg-white rounded-xl shadow-lg p-8 mb-10">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-6">Information to Share with Test Takers</h2>
+
+            <div id="test-taker-instructions" class="bg-gray-50 p-6 rounded-lg mb-8">
+                <div class="prose max-w-none">
+                    <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                        <p class="font-medium text-gray-800">
+                            Please read the following instructions carefully to ensure you can successfully complete your examination. The examination will only be available during the specified start and end times set by your examiner.
+                        </p>
+                    </div>
+
+                    <ol class="list-decimal pl-8 space-y-6">
+                        <li class="instruction-card bg-gray-50 p-4 rounded-lg">
+                            <strong>Access:</strong> The test will be accessible via the test link provided by your examiner.
+                        </li>
+
+                        <li class="instruction-card bg-gray-50 p-4 rounded-lg">
+                            <strong>Authentication:</strong> On the test page, you must enter your assigned password/ID exactly as provided, respecting capitalization and white spaces.
+                        </li>
+
+                        <li class="instruction-card bg-gray-50 p-4 rounded-lg">
+                            <strong>Validation:</strong> After entering your password/ID, click "Validate". Upon successful validation, you will be able to select your assigned test from the dropdown menu.
+                        </li>
+
+                        <li class="instruction-card bg-gray-50 p-4 rounded-lg">
+                            <strong>Time Management:</strong> The timer will start immediately when the test loads. You must complete all questions within the allocated time frame.
+                        </li>
+
+                        <li class="instruction-card bg-red-50 border-l-4 border-red-400 p-4 rounded-lg">
+                            <span class="text-red-600 font-bold">IMPORTANT:</span> <strong>Single Attempt Only</strong> - You have only one attempt with your ID. Do not refresh or reload the page during the test as this will prevent a second chance of validation or reloading the same test. The test must be completed once loaded.
+                        </li>
+                    </ol>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-lg mt-6 mb-6">
+                        <h3 class="font-semibold text-lg mb-2">Device Recommendations</h3>
+                        <p class="text-gray-700">
+                            The test is best taken on a laptop or desktop computer. Mobile phones may be suitable depending on the nature of the test. If the examiner has not included external links or downloads, a mobile device should work, but do not navigate away from the test page.
+                        </p>
+                    </div>
+
+                    <div class="bg-red-50 border-l-4 border-red-400 p-4 rounded-lg">
+                        <h3 class="font-semibold text-lg mb-2">Examination Availability</h3>
+                        <p class="text-gray-700">
+                            The test will be automatically unlisted from the platform after the specified end time. Ensure you begin your test with enough time to complete it before the deadline.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a href="index.html" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors">
+                Return to Home
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 md:py-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center space-y-4">
+                <div class="flex flex-wrap justify-center gap-4 md:gap-6">
+                    <a href="pre-pricing.html" class="hover:text-blue-400 transition-colors text-sm md:text-base">Pricing</a>
+                    <a href="terms-of-service.html" class="hover:text-blue-400 transition-colors text-sm md:text-base">Legal</a>
+                    <a href="faqs.html" class="hover:text-blue-400 transition-colors text-sm md:text-base">FAQs</a>
+                    <a href="checkcredit.html" class="hover:text-blue-400 transition-colors text-sm md:text-base">Credits</a>
+                </div>
+                <p class="text-sm md:text-base">&copy; 2025 ExaminationHall. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add hidden textarea for copying content -->
+    <textarea id="instructionsText" style="position: absolute; left: -9999px;" readonly></textarea>
+
+    <script>
+        // Function to generate content as a downloadable text file
+        document.getElementById('downloadInstructions').addEventListener('click', function() {
+            // Get the content but remove the styling/HTML
+            const element = document.getElementById('test-taker-instructions');
+            const clone = element.cloneNode(true);
+
+            // Format important sections
+            const instructionsContent =
+`EXAMINATIONHALL - TEST TAKER INSTRUCTIONS
+=============================================
+
+Please read the following instructions carefully to ensure you can successfully complete your examination.
+
+The examination will only be available during the specified start and end times set by your examiner.
+
+1. ACCESS:
+   The test will be accessible via the test link provided by your examiner.
+
+2. AUTHENTICATION:
+   On the test page, you must enter your assigned password/ID exactly as provided,
+   respecting capitalization and white spaces.
+
+3. VALIDATION:
+   After entering your password/ID, click "Validate". Upon successful validation,
+   you will be able to select your assigned test from the dropdown menu.
+
+4. TIME MANAGEMENT:
+   The timer will start immediately when the test loads. You must complete all questions
+   within the allocated time frame.
+
+5. IMPORTANT - SINGLE ATTEMPT ONLY:
+   You have only one attempt with your ID. Do not refresh or reload the page during the test
+   as this will prevent a second chance of validation or reloading the same test.
+   The test must be completed once loaded.
+
+DEVICE RECOMMENDATIONS:
+The test is best taken on a laptop or desktop computer. Mobile phones may be suitable
+depending on the nature of the test. If the examiner has not included external links
+or downloads, a mobile device should work, but do not navigate away from the test page.
+
+EXAMINATION AVAILABILITY:
+The test will be automatically unlisted from the platform after the specified end time.
+Ensure you begin your test with enough time to complete it before the deadline.`;
+
+            // Create blob with the content
+            const blob = new Blob([instructionsContent], {type: 'text/plain'});
+
+            // Create download link
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'ExaminationHall_Instructions_for_Test_Takers.txt';
+
+            // Trigger download
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+
+        // Function to copy instructions to clipboard
+        document.getElementById('copyInstructions').addEventListener('click', function() {
+            const instructionsContent =
+`TEST TAKER INSTRUCTIONS
+
+Please read the following instructions carefully to ensure you can successfully complete your examination.
+
+The examination will only be available during the specified start and end times set by your examiner.
+
+1. ACCESS: The test will be accessible via the test link provided by your examiner.
+
+2. AUTHENTICATION: On the test page, you must enter your assigned password/ID exactly as provided, respecting capitalization and white spaces.
+
+3. VALIDATION: After entering your password/ID, click "Validate". Upon successful validation, you will be able to select your assigned test from the dropdown menu.
+
+4. TIME MANAGEMENT: The timer will start immediately when the test loads. You must complete all questions within the allocated time frame.
+
+5. IMPORTANT - SINGLE ATTEMPT ONLY: You have only one attempt with your ID. Do not refresh or reload the page during the test as this will prevent a second chance of validation or reloading the same test. The test must be completed once loaded.
+
+DEVICE RECOMMENDATIONS:
+The test is best taken on a laptop or desktop computer. Mobile phones may be suitable depending on the nature of the test. If the examiner has not included external links or downloads, a mobile device should work, but do not navigate away from the test page.
+
+EXAMINATION AVAILABILITY:
+The test will be automatically unlisted from the platform after the specified end time. Ensure you begin your test with enough time to complete it before the deadline.`;
+
+            const textArea = document.getElementById('instructionsText');
+            textArea.value = instructionsContent;
+            textArea.select();
+            document.execCommand('copy');
+
+            // Show feedback
+            const originalText = this.innerHTML;
+            this.innerHTML = '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Copied!</span>';
+
+            setTimeout(() => {
+                this.innerHTML = originalText;
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
